@@ -1,49 +1,33 @@
 # Consecutive Substrings
 
-## Learning Goals
+## Description
+This project contains a solution for generating **all consecutive substrings** of a given string.  
+A consecutive substring is a contiguous sequence of characters from the original string.
 
-- Practice algorithmic problem solving
+For example, for the input `'abc'`, the output will be:  
+`['a', 'ab', 'abc', 'b', 'bc', 'c']`
 
-## Instructions
+---
 
-Given a string, return all consecutive substrings within that string consisting
-of at least one character. Substrings should be returned in the order in which
-they appear.
+## How It Works
+The solution uses two nested loops to iterate over all possible start and end indices in the string.  
+- The outer loop sets the start index of the substring.  
+- The inner loop sets the end index.  
+- For each pair, the substring is extracted and added to the results.
 
-Note than in the string `'abc'`, `'ac'` is not a consecutive substring.
+This approach ensures all possible consecutive substrings are captured in the order they appear.
 
-The input string will have a length of 0 or more.
+---
 
-```txt
-Input: 'abc'
-Output: ['a', 'ab', 'abc', 'b', 'bc', 'c']
+## Time Complexity
+The time complexity is **O(n²)**, where *n* is the length of the input string.  
+This is because two nested loops are required to generate every possible substring.
 
-Input: 'a'
-Output: ['a']
-```
+---
 
-## Before you start coding
+## Installation & Usage
 
-1. Rewrite the problem in your own words
-2. Validate that you understand the problem
-3. Write your own test cases
-4. Pseudocode
-5. Code!
-6. Determine Big(O)
-
-**_And remember, don't run our tests until you've passed your own!_**
-
-## How to run your own tests
-
-### JavaScript
-
-1. `cd` into the javascript folder
-2. `node <filename>.js`
-
-## How to run our tests
-
-### JavaScript
-
-1. `cd` into the javascript folder
-2. `npm i`
-3. `npm test`
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   cd <repo-folder>
