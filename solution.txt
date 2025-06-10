@@ -1,2 +1,29 @@
-Please add your pseudocode to this file
-And a written explanation of your solution
+function consecutiveSubstrings(s):
+    create empty result array
+    for each starting index i from 0 to s.length - 1:
+        for each ending index j from i + 1 to s.length:
+            push s.slice(i, j) into result
+    return result
+
+# Consecutive Substrings Solution
+
+## Description
+The solution generates all possible consecutive substrings of a given string by using two nested loops:
+- The outer loop iterates through each starting index of the substring.
+- The inner loop iterates through each possible ending index for that substring.
+For each pair of start and end indices, it slices the substring from the original string and adds it to the results array.
+This way, every possible consecutive substring is collected in order.
+
+## How it works
+1. Initialize an empty array to store substrings.
+2. Loop through each character in the string as the start index.
+3. For each start index, loop through possible end indices from start + 1 up to the length of the string.
+4. Extract substring using string.slice(start, end).
+5. Push the substring into the results array.
+6. After both loops finish, return the array containing all consecutive substrings.
+
+## Time Complexity
+- Time complexity is O(n²) where n is the length of the input string.
+- This is because there are two nested loops that iterate through the string, generating all possible substrings.
+- Each substring extraction with `slice` operates in O(k) time, but since substrings are small and contiguous, this cost is usually considered negligible in this context.
+
